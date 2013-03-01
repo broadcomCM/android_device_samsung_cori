@@ -7,4 +7,4 @@ Maintainer: Bieltv.3
 
 Special Thanks: Androsamace, vM00
 
-Note: to build you must paste cyanogen_pocket.mk to vendor/cyanogen/products
+Note: to build you must paste cyanogen_cori.mk to vendor/cyanogen/products
