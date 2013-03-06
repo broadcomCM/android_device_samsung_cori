@@ -20,17 +20,13 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 # Add device package overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/cori/overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mdpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Add LDPI assets
     PRODUCT_LOCALES += ldpi
-
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
 
 # Kernel modules
 PRODUCT_COPY_FILES += \
@@ -45,13 +41,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/cori/ramdisk/ueventd.gt-s5300.rc:root/ueventd.gt-s5300.rc \
     device/samsung/cori/ramdisk/init.gt-s5300.rc:root/init.gt-s5300.rc
-
-# Other kernel modules not in ramdisk
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/cori/prebuilt/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
