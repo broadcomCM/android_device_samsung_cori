@@ -21,4 +21,4 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo cori-eng
-add_lunch_combo cori_cooperve-userdebug
+add_lunch_combo generic_cori-userdebug
