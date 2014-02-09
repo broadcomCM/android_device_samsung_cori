@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cori.mk
+    $(LOCAL_DIR)/device_cori.mk
